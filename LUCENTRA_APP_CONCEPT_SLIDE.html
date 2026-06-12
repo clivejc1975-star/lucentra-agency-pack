@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LUCENTRA — App Concept Slide</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #0a0a1a;
+    color: #d4dce8;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+  }
+  .slide {
+    width: 1920px;
+    height: 1080px;
+    padding: 38px 70px 28px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  /* ─── TOP ─── */
+  .top { text-align: center; margin-bottom: 8px; }
+  .brand {
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: 26px;
+    text-transform: uppercase;
+    color: #e0dce8;
+    margin-bottom: 8px;
+  }
+  .tagline {
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    opacity: 0.7;
+    margin-bottom: 16px;
+  }
+  .orb-wrap { position: relative; margin: 0 auto 10px; width: 140px; height: 110px; }
+  .orb {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: radial-gradient(circle at 48% 45%, rgba(255,255,255,0.4) 0%, #b794f4 20%, #805ad5 45%, #553c9a 70%, #2d1b69 90%);
+    box-shadow: 0 0 50px rgba(128,90,213,0.4), 0 0 110px rgba(128,90,213,0.2);
+  }
+  .chloe-name { font-size: 34px; font-weight: 500; color: #e8e0f0; margin-bottom: 6px; text-align: center; letter-spacing: 3px; }
+  .chloe-sub { font-size: 15px; opacity: 0.65; text-align: center; letter-spacing: 2px; margin-bottom: 14px; line-height: 1.7; }
+  .arrows { text-align: center; color: #805ad5; font-size: 16px; letter-spacing: 28px; margin-bottom: 20px; opacity: 0.55; }
+
+  /* ─── PILLARS ─── */
+  .pillars {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+    flex: 1;
+    margin-bottom: 22px;
+  }
+  .pillar {
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    padding: 30px 30px 28px;
+    background: rgba(255,255,255,0.025);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .pillar::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .pillar.health::before { background: linear-gradient(90deg, transparent, #34d399, transparent); }
+  .pillar.wealth::before { background: linear-gradient(90deg, transparent, #fbbf24, transparent); }
+  .pillar.mind::before { background: linear-gradient(90deg, transparent, #a78bfa, transparent); }
+  .pillar.longevity::before { background: linear-gradient(90deg, transparent, #f87171, transparent); }
+  .pillar h2 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    text-align: center;
+  }
+  .health h2 { color: #34d399; }
+  .wealth h2 { color: #fbbf24; }
+  .mind h2 { color: #a78bfa; }
+  .longevity h2 { color: #f87171; }
+  .pillar ul { list-style: none; display: flex; flex-direction: column; gap: 12px; flex: 1; justify-content: flex-start; }
+  .pillar li {
+    font-size: 15px;
+    line-height: 1.5;
+    opacity: 0.85;
+    padding-left: 22px;
+    position: relative;
+    font-weight: 300;
+  }
+  .pillar li::before {
+    content: '\2022';
+    position: absolute;
+    left: 2px;
+    color: rgba(255,255,255,0.35);
+  }
+
+  /* ─── BOTTOM BARS ─── */
+  .bars { display: flex; flex-direction: column; gap: 14px; }
+  .bar {
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 18px 40px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .bar::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .intel { background: rgba(128,90,213,0.05); }
+  .intel::before { background: linear-gradient(90deg, transparent, #805ad5, transparent); }
+  .heal { background: rgba(6,182,212,0.05); }
+  .heal::before { background: linear-gradient(90deg, transparent, #06b6d4, transparent); }
+  .bar h3 {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .intel h3 { color: #a78bfa; }
+  .heal h3 { color: #06b6d4; }
+  .bar .stats {
+    font-size: 14px;
+    opacity: 0.75;
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 4px;
+  }
+  .bar .example {
+    font-size: 14px;
+    font-style: italic;
+    opacity: 0.85;
+    color: #c4b5fd;
+    margin-bottom: 6px;
+    line-height: 1.6;
+  }
+  .bar .flow {
+    font-size: 14px;
+    opacity: 0.9;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 4px;
+  }
+  .bar .license {
+    font-size: 13px;
+    font-style: italic;
+    opacity: 0.7;
+    margin-top: 4px;
+  }
+  .bar .wf {
+    font-size: 13px;
+    color: #06b6d4;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+
+  /* ─── FOOTER ─── */
+  .footer {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 13px;
+    opacity: 0.42;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+
+  /* Glow */
+  .glow {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 250px;
+    background: radial-gradient(ellipse, rgba(128,90,213,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* ─── PORTRAIT LAYOUT (1170x2532 iPhone-canvas fill) ───
+   Session 58 — Clive directive "the lucentra concept slide had to be the
+   same format as the bodhi concept meaning entire page" + "concept slide
+   only landscape / whole fucking page". Bodhi slide fills its landscape
+   canvas natively; Lucentra slide now fills the portrait canvas natively
+   instead of rendering as a letterboxed landscape at 1170x658 centered in
+   1170x2532. Activated by body[data-orient="portrait"] set in
+   scripts/video/render-concept.mjs for the Lucentra render pass. */
+  body[data-orient="portrait"] { width: 1170px; height: 2532px; }
+  body[data-orient="portrait"] .slide { width: 1170px; height: 2532px; padding: 80px 60px 60px; }
+  body[data-orient="portrait"] .brand { font-size: 96px; letter-spacing: 20px; margin-bottom: 18px; }
+  body[data-orient="portrait"] .tagline { font-size: 26px; letter-spacing: 4px; margin-bottom: 36px; line-height: 1.5; }
+  body[data-orient="portrait"] .orb-wrap { width: 200px; height: 160px; margin-bottom: 20px; }
+  body[data-orient="portrait"] .orb { width: 160px; height: 160px; }
+  body[data-orient="portrait"] .chloe-name { font-size: 50px; margin-bottom: 12px; letter-spacing: 4px; }
+  body[data-orient="portrait"] .chloe-sub { font-size: 22px; margin-bottom: 32px; line-height: 1.6; padding: 0 40px; }
+  body[data-orient="portrait"] .arrows { font-size: 22px; letter-spacing: 40px; margin-bottom: 40px; }
+  body[data-orient="portrait"] .pillars {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-bottom: 36px;
+  }
+  body[data-orient="portrait"] .pillar { padding: 36px 32px 32px; }
+  body[data-orient="portrait"] .pillar h2 { font-size: 24px; letter-spacing: 8px; margin-bottom: 26px; }
+  body[data-orient="portrait"] .pillar li { font-size: 22px; padding-left: 28px; line-height: 1.55; }
+  body[data-orient="portrait"] .bars { gap: 22px; margin-bottom: 20px; }
+  body[data-orient="portrait"] .bar { padding: 28px 40px 30px; }
+  body[data-orient="portrait"] .bar h3 { font-size: 22px; letter-spacing: 6px; margin-bottom: 16px; }
+  body[data-orient="portrait"] .bar .stats,
+  body[data-orient="portrait"] .bar .flow { font-size: 20px; line-height: 1.7; }
+  body[data-orient="portrait"] .bar .example { font-size: 20px; line-height: 1.65; }
+  body[data-orient="portrait"] .bar .license { font-size: 19px; }
+  body[data-orient="portrait"] .bar .wf { font-size: 18px; letter-spacing: 4px; margin-top: 12px; }
+  body[data-orient="portrait"] .footer { font-size: 18px; margin-top: 30px; letter-spacing: 1.5px; }
+  body[data-orient="portrait"] .glow { top: 120px; width: 800px; height: 400px; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="glow"></div>
+
+  <div class="top">
+    <div class="brand">Lucentra</div>
+    <div class="tagline">The world's first cross-domain AI life intelligence platform &middot; Two products in one codebase</div>
+  </div>
+
+  <div class="orb-wrap"><div class="orb"></div></div>
+  <div class="chloe-name">Chloe</div>
+  <div class="chloe-sub">Your AI companion — warm, sharp, voice-first &middot; Zero silence &middot; Texts you every morning &middot; British TTS</div>
+  <div class="arrows">&#9660; &#9660; &#9660; &#9660;</div>
+
+  <div class="pillars">
+    <div class="pillar health">
+      <h2>Health</h2>
+      <ul>
+        <li>Bio age calculator</li>
+        <li>Illness risk predictor</li>
+        <li>Sleep predictor</li>
+        <li>Fertility &amp; cycle (59 categories)</li>
+        <li>Supplement tracker</li>
+        <li>Food database (2,145 + 3M barcode)</li>
+        <li>Symptom checker</li>
+        <li>GP health report</li>
+        <li>Water tracking &amp; weight logging</li>
+        <li>HealthKit &amp; Health Connect</li>
+        <li>Photo food logging (AI vision)</li>
+      </ul>
+    </div>
+    <div class="pillar wealth">
+      <h2>Wealth</h2>
+      <ul>
+        <li>Budget tracker (15 categories)</li>
+        <li>Savings goals</li>
+        <li>Spending analysis</li>
+        <li>Net worth tracker</li>
+        <li>FIRE calculator</li>
+        <li>Bills tracker</li>
+        <li>Crypto portfolio</li>
+        <li>Transaction logging</li>
+        <li>Cancellation cost analyser</li>
+        <li>Authority score</li>
+      </ul>
+    </div>
+    <div class="pillar mind">
+      <h2>Mind</h2>
+      <ul>
+        <li>7 therapy modes (CBT, breathwork...)</li>
+        <li>15 brain games (memory, logic)</li>
+        <li>Voice journal with AI analysis</li>
+        <li>25 meditations + 4 programmes</li>
+        <li>Oracle cards (69) &amp; daily draws</li>
+        <li>Mood tracking &amp; charts</li>
+        <li>9 soundscapes (procedural audio)</li>
+        <li>Emotional mirror</li>
+        <li>Confession space</li>
+        <li>AI sleep stories</li>
+      </ul>
+    </div>
+    <div class="pillar longevity">
+      <h2>Longevity</h2>
+      <ul>
+        <li>Real Age composite score</li>
+        <li>Longevity Labs &mdash; grip, Attia blood panel &amp; biological age</li>
+        <li>Death clock</li>
+        <li>29 longevity protocols</li>
+        <li>Predictive intervention engine</li>
+        <li>Habit stacking from correlations</li>
+        <li>63 achievements &amp; gamification</li>
+        <li>Daily SMS companion check-in</li>
+        <li>Annual letter from Chloe</li>
+        <li>Compound effect tracking</li>
+        <li>8 languages supported</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="bars">
+    <div class="bar intel">
+      <h3>Central Intelligence — 24 Engines</h3>
+      <div class="stats">93 features &middot; 24 engines &middot; 71 Supabase tables &middot; 194 API routes &middot; 5,249 tests &middot; 758 voice commands &middot; UK bank auto-sync &middot; AI meal plans &middot; Concierge: she phones &amp; books FOR you in her own voice (Pro+) &middot; GDPR (Ireland-hosted)</div>
+      <div class="example">She knows your spending increases when your sleep drops below 6 hours — cross-domain intelligence no single app can match</div>
+      <div class="stats">Persistent memory &middot; Pattern detection &middot; Proactive alerts &middot; Relationships &middot; Purpose &middot; Career &middot; Full GDPR delete/export</div>
+    </div>
+    <div class="bar heal">
+      <h3>Product 2: AutoHeal — Self-Healing Pipeline — World First</h3>
+      <div class="flow">AI screenshots the live app, identifies visual bugs that produce zero error logs, diagnoses the code, writes a surgical fix, validates, and deploys</div>
+      <div class="stats">8,000+ lines &middot; 9 protection layers &middot; Tiered remediation &middot; No Is Never No protocol &middot; Quality ratchet (can only improve)</div>
+      <div class="license"><em>Licensable as standalone B2B SaaS for any web application — doubles the addressable market</em></div>
+      <div class="wf">The only app in the world that can see itself and fix what it sees</div>
+    </div>
+  </div>
+
+  <div class="footer">Built by 1 non-technical founder + AI &middot; 100,000+ lines &middot; Free 7-day trial / &pound;19.99 / &pound;29.99 / &pound;44.99 &middot; 63.8% blended margin &middot; All tiers profitable at 100% worst-case usage &middot; UK provisional patent filed 13 May 2026 &middot; application GB2611164.1</div>
+</div>
+</body>
+</html>

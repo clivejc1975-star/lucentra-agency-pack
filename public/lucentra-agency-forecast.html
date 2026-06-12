@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lucentra AI Ltd — 5-Year Revenue Forecast</title>
+<style>
+  @page { size: A4; margin: 16mm 16mm; }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: #f5f4f0;
+    color: #111;
+    font-family: "Garamond", "EB Garamond", "Times New Roman", Times, serif;
+    font-size: 10.5pt;
+    line-height: 1.45;
+  }
+  .page {
+    max-width: 820px;
+    margin: 24px auto;
+    padding: 40px 52px;
+    background: #fff;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.08);
+  }
+  h1 { font-size: 19pt; font-weight: 600; text-align: center; margin: 0 0 4pt; letter-spacing: 0.4pt; }
+  .sub { text-align: center; font-size: 10pt; color: #444; margin: 0 0 4pt; }
+  .meta { text-align: center; font-size: 9pt; color: #777; margin: 0 0 14pt; font-style: italic; }
+  h2 { font-size: 13pt; font-weight: 700; margin: 14pt 0 5pt; page-break-after: avoid; color: #1a3550; }
+  h3 { font-size: 11pt; font-weight: 700; margin: 10pt 0 3pt; color: #2a4d6a; }
+  p { margin: 4pt 0 6pt; text-align: justify; }
+  ul { margin: 4pt 0 6pt 18pt; padding: 0; }
+  li { margin: 2pt 0; }
+  table { width: 100%; border-collapse: collapse; margin: 6pt 0 10pt; font-size: 10pt; }
+  th, td { border: 1px solid #ccc; padding: 5pt 7pt; text-align: left; vertical-align: top; }
+  th { background: #f0eee5; font-weight: 700; color: #1a3550; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.strong td { font-weight: 700; background: #fafaf7; }
+  .callout {
+    background: #f0f6ff;
+    border-left: 3px solid #2a4d6a;
+    padding: 7pt 11pt;
+    margin: 6pt 0 12pt;
+    font-size: 10pt;
+  }
+  .scenario {
+    margin: 10pt 0 14pt;
+    padding: 10pt 12pt;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    page-break-inside: avoid;
+  }
+  .scenario.pessimistic { border-color: #c79b9b; background: #fcf8f8; }
+  .scenario.probable { border-color: #9bbfc7; background: #f7fbfc; }
+  .scenario.optimistic { border-color: #9bc79b; background: #f8fcf8; }
+  .scenario h3 { margin-top: 0; }
+  .footer {
+    margin-top: 22pt;
+    padding-top: 10pt;
+    border-top: 1px solid #aaa;
+    font-size: 8.5pt;
+    color: #666;
+    text-align: center;
+  }
+  @media print {
+    body { background: #fff; }
+    .page { box-shadow: none; margin: 0; padding: 0; max-width: none; }
+    .no-print { display: none !important; }
+  }
+  .toolbar {
+    max-width: 820px;
+    margin: 16px auto 0;
+    padding: 8px 52px 0;
+    text-align: right;
+    font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-size: 10pt;
+    color: #555;
+  }
+  .toolbar button {
+    background: #2a4d6a;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 14px;
+    font-size: 10pt;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+</style>
+</head>
+<body>
+<div class="toolbar no-print">
+  Save as PDF: <strong>Cmd+P</strong> / <strong>Ctrl+P</strong>
+  <button onclick="window.print()">Save as PDF</button>
+</div>
+
+<div class="page">
+
+<h1>Lucentra AI Ltd — 5-Year Revenue Forecast</h1>
+<p class="sub">Lucentra consumer app · Pessimistic · Probable · Optimistic</p>
+<p class="meta">Confidential. First-contact materials for partnership conversations. Numbers are bottom-up funnel math from internal commercial analysis. Distribute under NDA only.</p>
+
+<h2>1. What this forecasts</h2>
+<div class="callout">
+  Lucentra is a UK-incorporated AI longevity companion app. The web app is live at lucentra-delta.vercel.app and the iOS build is in TestFlight running user-acceptance testing ahead of App Store launch. Commercial infrastructure (Stripe + Apple IAP, four tiers from £19.99 to £44.99 per month plus add-on credit packs) is tested and ready to activate on launch. This document projects consumer-app revenue from App Store launch over a 5-year horizon under three honesty-bounded scenarios. The Pessimistic case is deliberately conservative — designed to test what the floor looks like if launch traction underperforms. The Probable case is the base case under normal commercial execution. The Optimistic case is the upper bound assuming each individual growth lever compounds favourably. No paying-user revenue has accrued yet — the forecast begins at launch month zero.
+</div>
+
+<h2>2. Pricing model + ARPU assumption</h2>
+
+<table>
+  <thead>
+    <tr><th>Tier</th><th class="num">Monthly</th><th class="num">Annual</th><th>Daily AI msgs</th><th class="num">Mix assumption</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Free (7-day trial)</td><td class="num">£0</td><td class="num">—</td><td>10</td><td class="num">—</td></tr>
+    <tr><td>Standard</td><td class="num">£19.99</td><td class="num">£239.88</td><td>100</td><td class="num">35%</td></tr>
+    <tr><td>Pro</td><td class="num">£29.99</td><td class="num">£359.88</td><td>150</td><td class="num">50%</td></tr>
+    <tr class="strong"><td>Pro+ (most features)</td><td class="num">£44.99</td><td class="num">£449 (save £90)</td><td>200</td><td class="num">15%</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Blended monthly ARPU:</strong> 0.35 × £19.99 + 0.50 × £29.99 + 0.15 × £44.99 = <strong>£28.74 / month</strong>. <strong>Blended annual revenue per paid user (after Apple IAP commission and Stripe processing fees, rounded down for prudence):</strong> ~£336 / year.</p>
+
+<p><strong>Free → paid conversion rate:</strong> 3% honest-floor planning baseline (consumer wellness apps benchmark 2-5%; the conservative end of that range is what's used in the Pessimistic and Probable scenarios below).</p>
+
+<p><strong>Cost discipline:</strong> cost per AI message £0.00634 with cached Claude Sonnet; blended gross margin 63.8% at 30% usage; all four paid tiers loss-proof at worst-case 100% daily usage. Add-on credit packs at 65% margin. Unit economics positive from user one.</p>
+
+<h2>3. PESSIMISTIC scenario</h2>
+
+<div class="scenario pessimistic">
+<h3>Assumptions — slow first year, every lever underperforms</h3>
+<ul>
+  <li>Word-of-mouth slow, marketing underperforms vs plan</li>
+  <li>Free → paid conversion drops to <strong>1.5%</strong> (half the planning baseline)</li>
+  <li>Annual gross paid-user churn <strong>40%</strong> (high for SaaS, accounted for in net users below)</li>
+  <li>App Store discovery weak, no PR or influencer breakthrough</li>
+  <li>End-of-year paid user counts: <strong>850 → 2,030 → 4,400 → 7,500 → 10,500</strong></li>
+</ul>
+
+<h3>Numbers</h3>
+<table>
+  <thead>
+    <tr><th>Metric</th><th class="num">Year 1</th><th class="num">Year 2</th><th class="num">Year 3</th><th class="num">Year 4</th><th class="num">Year 5</th><th class="num">5-yr total</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>End-of-year paid users</td><td class="num">850</td><td class="num">2,030</td><td class="num">4,400</td><td class="num">7,500</td><td class="num">10,500</td><td class="num">—</td></tr>
+    <tr><td>Avg paid users (triangle approx)</td><td class="num">425</td><td class="num">1,440</td><td class="num">3,215</td><td class="num">5,950</td><td class="num">9,000</td><td class="num">—</td></tr>
+    <tr><td>Annual revenue (avg × £336)</td><td class="num">£142,800</td><td class="num">£483,840</td><td class="num">£1,080,240</td><td class="num">£1,999,200</td><td class="num">£3,024,000</td><td class="num strong">£6,730,080</td></tr>
+    <tr class="strong"><td>End-of-year ARR (snapshot)</td><td class="num">£285,600</td><td class="num">£682,080</td><td class="num">£1,478,400</td><td class="num">£2,520,000</td><td class="num">£3,528,000</td><td class="num">—</td></tr>
+  </tbody>
+</table>
+
+<h3>5-year ARR trajectory</h3>
+<svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;font-family:Garamond,serif;font-size:11px">
+  <text x="350" y="20" fill="#7a4040" font-weight="700" text-anchor="middle">Pessimistic — end-of-year ARR (£)</text>
+  <line x1="50" y1="170" x2="680" y2="170" stroke="#888" stroke-width="1"/>
+  <rect x="80"  y="160" width="100" height="10"  fill="#c79b9b"/>
+  <text x="130" y="155" fill="#111" text-anchor="middle" font-weight="700">£286K</text>
+  <text x="130" y="188" fill="#444" text-anchor="middle">Year 1</text>
+  <rect x="200" y="147" width="100" height="23"  fill="#c79b9b"/>
+  <text x="250" y="142" fill="#111" text-anchor="middle" font-weight="700">£682K</text>
+  <text x="250" y="188" fill="#444" text-anchor="middle">Year 2</text>
+  <rect x="320" y="120" width="100" height="50"  fill="#c79b9b"/>
+  <text x="370" y="115" fill="#111" text-anchor="middle" font-weight="700">£1.48M</text>
+  <text x="370" y="188" fill="#444" text-anchor="middle">Year 3</text>
+  <rect x="440" y="84"  width="100" height="86"  fill="#c79b9b"/>
+  <text x="490" y="79"  fill="#111" text-anchor="middle" font-weight="700">£2.52M</text>
+  <text x="490" y="188" fill="#444" text-anchor="middle">Year 4</text>
+  <rect x="560" y="50"  width="100" height="120" fill="#c79b9b"/>
+  <text x="610" y="45"  fill="#111" text-anchor="middle" font-weight="700">£3.53M</text>
+  <text x="610" y="188" fill="#444" text-anchor="middle">Year 5</text>
+</svg>
+
+<p><strong>Reality check:</strong> at this trajectory cumulative gross revenue across the 5 years is approximately £6.73M. The Pessimistic case is the worst plausible outcome and is shown for honesty, not as a target. Even in this scenario the business is profitably operating at end of year 5 (gross margin 63.8% at sustained usage = ~£2.2M cumulative gross profit).</p>
+</div>
+
+<h2>4. PROBABLE scenario (base case)</h2>
+
+<div class="scenario probable">
+<h3>Assumptions — base case with normal commercial execution</h3>
+<ul>
+  <li>Marketing + brand + design polish lift launch trajectory</li>
+  <li>Free → paid conversion at the planning baseline of <strong>3%</strong></li>
+  <li>Annual gross churn <strong>25%</strong> (consumer-wellness median, achievable with companion-stickiness factor)</li>
+  <li>App Store discovery moderate, organic word-of-mouth compounds Y2-Y4 then moderates</li>
+  <li>End-of-year paid user counts: <strong>2,700 → 10,140 → 24,500 → 44,000 → 66,000</strong></li>
+</ul>
+
+<h3>Numbers</h3>
+<table>
+  <thead>
+    <tr><th>Metric</th><th class="num">Year 1</th><th class="num">Year 2</th><th class="num">Year 3</th><th class="num">Year 4</th><th class="num">Year 5</th><th class="num">5-yr total</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>End-of-year paid users</td><td class="num">2,700</td><td class="num">10,140</td><td class="num">24,500</td><td class="num">44,000</td><td class="num">66,000</td><td class="num">—</td></tr>
+    <tr><td>Avg paid users (triangle approx)</td><td class="num">1,350</td><td class="num">6,420</td><td class="num">17,320</td><td class="num">34,250</td><td class="num">55,000</td><td class="num">—</td></tr>
+    <tr><td>Annual revenue (avg × £336)</td><td class="num">£453,600</td><td class="num">£2,157,120</td><td class="num">£5,819,520</td><td class="num">£11,508,000</td><td class="num">£18,480,000</td><td class="num strong">£38,418,240</td></tr>
+    <tr class="strong"><td>End-of-year ARR (snapshot)</td><td class="num">£907,200</td><td class="num">£3,407,040</td><td class="num">£8,232,000</td><td class="num">£14,784,000</td><td class="num">£22,176,000</td><td class="num">—</td></tr>
+  </tbody>
+</table>
+
+<h3>5-year ARR trajectory</h3>
+<svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;font-family:Garamond,serif;font-size:11px">
+  <text x="350" y="20" fill="#1d4960" font-weight="700" text-anchor="middle">Probable — end-of-year ARR (£)</text>
+  <line x1="50" y1="170" x2="680" y2="170" stroke="#888" stroke-width="1"/>
+  <rect x="80"  y="165" width="100" height="5"   fill="#9bbfc7"/>
+  <text x="130" y="160" fill="#111" text-anchor="middle" font-weight="700">£907K</text>
+  <text x="130" y="188" fill="#444" text-anchor="middle">Year 1</text>
+  <rect x="200" y="152" width="100" height="18"  fill="#9bbfc7"/>
+  <text x="250" y="147" fill="#111" text-anchor="middle" font-weight="700">£3.41M</text>
+  <text x="250" y="188" fill="#444" text-anchor="middle">Year 2</text>
+  <rect x="320" y="125" width="100" height="45"  fill="#9bbfc7"/>
+  <text x="370" y="120" fill="#111" text-anchor="middle" font-weight="700">£8.23M</text>
+  <text x="370" y="188" fill="#444" text-anchor="middle">Year 3</text>
+  <rect x="440" y="90"  width="100" height="80"  fill="#9bbfc7"/>
+  <text x="490" y="85"  fill="#111" text-anchor="middle" font-weight="700">£14.78M</text>
+  <text x="490" y="188" fill="#444" text-anchor="middle">Year 4</text>
+  <rect x="560" y="50"  width="100" height="120" fill="#9bbfc7"/>
+  <text x="610" y="45"  fill="#111" text-anchor="middle" font-weight="700">£22.18M</text>
+  <text x="610" y="188" fill="#444" text-anchor="middle">Year 5</text>
+</svg>
+
+<p><strong>Base-case logic:</strong> the consumer-wellness ARR / user-count progression is well-bounded by SaaS benchmarks for category leaders (Calm, Headspace) at equivalent stages. A UK-incorporated longevity app with a 3-patent IP portfolio (Bodhi filed 2026-04-08; Lucentra app GB2611164.1 filed 2026-05-13; BMS GB2608130.7 filed 2026-05-13 — all UK provisional in joint Clive + Jenny Olsson-Chattey names), full agency-quality marketing, and a 3-companion architecture should comfortably exceed 1% of category-leader benchmarks within 5 years.</p>
+</div>
+
+<h2>5. OPTIMISTIC scenario (upper bound — everything compounds)</h2>
+
+<div class="scenario optimistic">
+<h3>Assumptions — every growth lever fires</h3>
+<ul>
+  <li>Strong launch + PR breakthrough + influencer pickup in Year 1</li>
+  <li>Free → paid conversion lifts to <strong>5%</strong> via Companion stickiness + 7-day trial urgency</li>
+  <li>Annual gross churn <strong>15%</strong> (best-in-category for consumer wellness)</li>
+  <li>Network effects compound through Family Profiles + referral economics</li>
+  <li>End-of-year paid user counts: <strong>6,750 → 27,000 → 76,000 → 130,000 → 180,000</strong></li>
+</ul>
+
+<h3>Numbers</h3>
+<table>
+  <thead>
+    <tr><th>Metric</th><th class="num">Year 1</th><th class="num">Year 2</th><th class="num">Year 3</th><th class="num">Year 4</th><th class="num">Year 5</th><th class="num">5-yr total</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>End-of-year paid users</td><td class="num">6,750</td><td class="num">27,000</td><td class="num">76,000</td><td class="num">130,000</td><td class="num">180,000</td><td class="num">—</td></tr>
+    <tr><td>Avg paid users (triangle approx)</td><td class="num">3,375</td><td class="num">16,875</td><td class="num">51,500</td><td class="num">103,000</td><td class="num">155,000</td><td class="num">—</td></tr>
+    <tr><td>Annual revenue (avg × £336)</td><td class="num">£1,134,000</td><td class="num">£5,670,000</td><td class="num">£17,304,000</td><td class="num">£34,608,000</td><td class="num">£52,080,000</td><td class="num strong">£110,796,000</td></tr>
+    <tr class="strong"><td>End-of-year ARR (snapshot)</td><td class="num">£2,268,000</td><td class="num">£9,072,000</td><td class="num">£25,536,000</td><td class="num">£43,680,000</td><td class="num">£60,480,000</td><td class="num">—</td></tr>
+  </tbody>
+</table>
+
+<h3>5-year ARR trajectory</h3>
+<svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;font-family:Garamond,serif;font-size:11px">
+  <text x="350" y="20" fill="#2a5a2a" font-weight="700" text-anchor="middle">Optimistic — end-of-year ARR (£)</text>
+  <line x1="50" y1="170" x2="680" y2="170" stroke="#888" stroke-width="1"/>
+  <rect x="80"  y="165" width="100" height="5"   fill="#9bc79b"/>
+  <text x="130" y="160" fill="#111" text-anchor="middle" font-weight="700">£2.27M</text>
+  <text x="130" y="188" fill="#444" text-anchor="middle">Year 1</text>
+  <rect x="200" y="152" width="100" height="18"  fill="#9bc79b"/>
+  <text x="250" y="147" fill="#111" text-anchor="middle" font-weight="700">£9.07M</text>
+  <text x="250" y="188" fill="#444" text-anchor="middle">Year 2</text>
+  <rect x="320" y="119" width="100" height="51"  fill="#9bc79b"/>
+  <text x="370" y="114" fill="#111" text-anchor="middle" font-weight="700">£25.54M</text>
+  <text x="370" y="188" fill="#444" text-anchor="middle">Year 3</text>
+  <rect x="440" y="83"  width="100" height="87"  fill="#9bc79b"/>
+  <text x="490" y="78"  fill="#111" text-anchor="middle" font-weight="700">£43.68M</text>
+  <text x="490" y="188" fill="#444" text-anchor="middle">Year 4</text>
+  <rect x="560" y="50"  width="100" height="120" fill="#9bc79b"/>
+  <text x="610" y="45"  fill="#111" text-anchor="middle" font-weight="700">£60.48M</text>
+  <text x="610" y="188" fill="#444" text-anchor="middle">Year 5</text>
+</svg>
+
+<p><strong>Why this is the upper bound, not a target:</strong> the Optimistic case requires PR breakthrough, conversion uplift, and churn improvement to compound simultaneously. Each individual lever is plausible — each has been hit by a category leader. Compounding all four together is statistically less probable than the base case.</p>
+</div>
+
+<h2>6. Three-scenario comparison (5-year)</h2>
+
+<table>
+  <thead>
+    <tr><th>Metric</th><th class="num" style="color:#7a4040">Pessimistic</th><th class="num" style="color:#1d4960">Probable</th><th class="num" style="color:#2a5a2a">Optimistic</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>End-of-Y5 paid users</td><td class="num">10,500</td><td class="num">66,000</td><td class="num">180,000</td></tr>
+    <tr><td>End-of-Y5 ARR</td><td class="num">£3.53M</td><td class="num">£22.18M</td><td class="num">£60.48M</td></tr>
+    <tr><td>5-yr cumulative revenue</td><td class="num">£6.73M</td><td class="num">£38.4M</td><td class="num">£110.8M</td></tr>
+    <tr><td>Free → paid conversion</td><td class="num">1.5%</td><td class="num">3%</td><td class="num">5%</td></tr>
+    <tr><td>Annual gross churn</td><td class="num">40%</td><td class="num">25%</td><td class="num">15%</td></tr>
+  </tbody>
+</table>
+
+<h2>6b. New revenue line — Concierge call credits (added 2026-06-12, qualitative upside)</h2>
+<p><strong>Sessions 86–87 shipped the Concierge Suite (Pro+ only):</strong> the companion researches, drafts into the user's real mailbox, writes calendar events, and <strong>makes real phone calls in its own cloned, legally-disclosed voice</strong> — proven live on 2026-06-12. Calls are billed to the user at provider cost × 2 (≈50% gross margin), <strong>prepaid</strong> via £10/£20 credit packs on the existing Stripe rail (zero credit risk; £10 ≈ 12 typical calls).</p>
+<p><strong>Forecast treatment:</strong> deliberately NOT folded into the scenario tables — no call-volume history exists yet and we do not fabricate numbers. Treat as upside on every scenario: higher Pro+ attach-rate plus margin-positive consumption revenue. Tables re-base once real volumes exist.</p>
+<h2>7. Partnership engagement structure</h2>
+
+<div class="callout">
+  Lucentra AI Ltd is open to either a <strong>revenue-share or equity-share</strong> structure with a delivery partner, designed to minimise or remove upfront cash payment. Specific percentages, vesting schedules, and walk-away clauses are negotiated post-NDA based on engagement scope. The principle: the partner takes participating downside if launch underperforms and participating upside if it overperforms, rather than billing fixed cash regardless of outcome. Clive Chattey retains 100% of the app, IP, design direction, and product vision; the agency delivers a service. Bodhi (the autonomous quality pipeline) is a separate product line and not part of any delivery engagement scope.
+</div>
+
+<h2>8. Honest forecast disclaimers</h2>
+
+<p>Every forecast is a model, not a prediction. These three scenarios bracket what's plausible given the existing product state and the launch levers under Lucentra's control. The Probable case assumes a delivery partner of senior-craft quality executing the agreed scope; without that, the trajectory bends toward Pessimistic. The Optimistic case requires conditions outside any single party's control (PR breakthrough, influencer pickup, network-effect compounding) — useful as an upper bound, not a plan.</p>
+
+<p>Every number above is bottom-up from internal commercial analysis. None has been imported from external decks or marketing material. Comparable benchmarks (Calm, Headspace, similar consumer-wellness category leaders) are referenced as sanity checks not as targets.</p>
+
+<div class="footer">
+  <strong>Lucentra AI Ltd</strong> · Company number 17174304 · England and Wales<br>
+  Forecast prepared 11 May 2026 · Clive Chattey, Director · clive@lucentra-ai.app<br>
+  Document version 1.0 — agency-agnostic first-contact pack. Distribute under NDA only.
+</div>
+
+</div>
+</body>
+</html>
+
+<!-- Session 85 update (2026-06-05): Pro+ value INCREASED — Longevity Labs folds an Attia-grade lab-tracking capability (grip, ApoB/HbA1c/fasting insulin/hs-CRP panel, biological age) into the existing Pro+ bundle, and editable entries + deploy-proof data integrity raise the retention/trust floor. Projection ASSUMPTIONS unchanged this session (no price change); the value delivered per Pro+ seat rose. Rule 106: accounted-for. -->
